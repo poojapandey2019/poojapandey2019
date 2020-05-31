@@ -2,7 +2,7 @@ function getMovies(searchText){
 
     $("#moviesSpinner").removeClass("d-none");
 
-    $.get('http://www.omdbapi.com?apikey=915cbc57&s='+searchText)
+    $.get('https://www.omdbapi.com?apikey=915cbc57&s='+searchText)
     .then((response)=>{
 
         console.log(response);
@@ -35,7 +35,7 @@ function getMovies(searchText){
     function getMovie(){
         $("#movieSpinner").removeClass("d-none");
         let movieId=sessionStorage.getItem('movieId');
-        $.get('http://www.omdbapi.com?apikey=915cbc57&i='+movieId)
+        $.get('https://www.omdbapi.com?apikey=915cbc57&i='+movieId)
         .then((response)=>{
             console.log(response);
            let movie=response;
